@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --quiet --ext .js,.ts,.tsx .",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
+    "check-format": "npm run prettier -- --list-different",
+    "prepare": "husky install",
     "validate": "npm-run-all --parallel check-format lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
