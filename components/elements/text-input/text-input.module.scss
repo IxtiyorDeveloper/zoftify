@@ -1,0 +1,22 @@
+.wrapper {
+  .input {
+    background-color: var(--navlink);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black-1);
+    padding: 12px;
+    outline: none !important;
+    width: 365px;
+
+    &.required {
+      border: 1px solid var(--required);
+    }
+    &:focus{
+      border-width: 1.2px;
+      border-color: var(--main) !important;
+      box-shadow: 0 0 0 1px var(--main) !important;
+    }
+  }
+}

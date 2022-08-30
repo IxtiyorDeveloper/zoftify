@@ -1,0 +1,44 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--primary);
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    height: 48px;
+    background-color: var(--white);
+  }
+
+  &__main {
+    width: 100%;
+    display: inline-block;
+    padding-top: 48px;
+    height: 100vh;
+
+    .sidebar {
+      float: left;
+      width: 208px;
+      margin-right: 20px;
+      height: 100%;
+      background-color: var(--white);
+      margin-top: 1.5px;
+    }
+
+    .content {
+      overflow: hidden;
+      margin-top: 16px;
+      margin-right: 20px;
+      height: calc(100% - 32px);
+      border-radius: 8px;
+      background-color: var(--white);
+      padding: 16px 0;
+    }
+  }
+}

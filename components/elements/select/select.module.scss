@@ -1,0 +1,16 @@
+.wrapper {
+  .select {
+    background-color: var(--navlink);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black-1);
+    outline: none !important;
+    width: 365px;
+
+    &.required {
+      border: 1px solid var(--required);
+    }
+  }
+}

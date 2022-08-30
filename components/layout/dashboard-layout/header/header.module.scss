@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+
+  .img {
+    width: 208px;
+    padding-left: 24px;
+  }
+
+  .text {
+    color: var(--11);
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

@@ -1,1 +1,7 @@
-export { default as Pagination } from './pagination'
+export { default as Pagination } from './pagination/pagination'
+export { default as Search } from './search-input/search-input'
+export { default as Button } from './button/button'
+export { default as Table } from './table/table'
+export { default as TextInput } from './text-input/text-input'
+export { default as CustomSelect } from './select/select'
+export { default as DateInput } from './date-input/date-input'
