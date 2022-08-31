@@ -51,10 +51,7 @@ const Example: FC<IPagination> = ({ setPage, pagNum, page }) => {
               className="relative cursor-pointer inline-flex items-center rounded bg-gr px-2 py-2 mx-2 text-sm font-medium text-gray-500 hover:bg-gray-50"
               onClick={() => handlePrev()}>
               <div className="sr-only">Previous</div>
-              <ChevronLeftIcon
-                className="h-5 w-5 color1"
-                aria-hidden="true"
-              />
+              <ChevronLeftIcon className="h-5 w-5 color1" aria-hidden="true" />
             </div>
             {arr?.map((i, k) => {
               return (
@@ -73,10 +70,7 @@ const Example: FC<IPagination> = ({ setPage, pagNum, page }) => {
               className="relative inline-flex cursor-pointer items-center rounded bg-gr px-2 py-2 text-sm font-medium text-color-1 hover:bg-gray-50"
               onClick={() => handleNext()}>
               <div className="sr-only">Next</div>
-              <ChevronRightIcon
-                className="h-5 w-5 color1"
-                aria-hidden="true"
-              />
+              <ChevronRightIcon className="h-5 w-5 color1" aria-hidden="true" />
             </div>
           </nav>
         </div>
