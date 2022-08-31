@@ -1,7 +1,7 @@
 module.exports = {
     content: [
-        "./pages/*.{html,ts,tsx,js,jsx}",
-        "./components/**/**/*.{js,ts,jsx,tsx}",
+        './pages/*.{html,ts,tsx,js,jsx}',
+        './components/**/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         fontFamily: {
@@ -11,11 +11,11 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
-            'white': "#ffffff",
-            'pr': '#177EFF',
-            'gr': '#F5F6FA',
-            'color-1': '#667281',
-            red:'red'
+            white: '#ffffff',
+            pr: '#177EFF',
+            gr: '#F5F6FA',
+            color1: '#667281',
+            red: 'red',
         },
         extend: {
             spacing: {
@@ -24,7 +24,7 @@ module.exports = {
             },
             borderRadius: {
                 '4xl': '2rem',
-            }
-        }
+            },
+        },
     },
 }

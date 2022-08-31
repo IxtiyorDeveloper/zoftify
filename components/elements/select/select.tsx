@@ -1,8 +1,8 @@
-import {FC} from "react"
-import {Controller} from "react-hook-form"
-import ErrorLabel from "../text-input/ErrorLabel/ErrorLabel"
-import styles from "./select.module.scss";
-import Select from 'react-select';
+import {FC} from 'react'
+import {Controller} from 'react-hook-form'
+import ErrorLabel from '../text-input/ErrorLabel/ErrorLabel'
+import styles from './select.module.scss'
+import Select from 'react-select'
 
 export interface IInputProps {
     placeholder?: string
@@ -19,18 +19,17 @@ export interface IInputProps {
 
 export interface IOption {
     label: string
-    value: string | boolean | number
+    value: "draft" | "published"
 }
 
-
 const CustomSelect: FC<IInputProps> = ({
-                                           placeholder = "",
+                                           placeholder = '',
                                            name,
-                                           htmlType = "text",
-                                           error = "",
+                                           htmlType = 'text',
+                                           error = '',
                                            control,
                                            required = false,
-                                           label = "",
+                                           label = '',
                                            disabled,
                                            defaultValue,
                                            options,
@@ -41,20 +40,22 @@ const CustomSelect: FC<IInputProps> = ({
             <Controller
                 name={name}
                 control={control}
-                render={({field: {onChange, value}}) => (
-                    <Select
-                        placeholder={placeholder}
-                        isDisabled={disabled}
-                        id={name}
-                        defaultValue={defaultValue}
-                        onChange={onChange}
-                        value={value}
-                        // @ts-ignore
-                        options={options}
-                        className={`${styles.select} ${!!error ? styles.required : ""}`}
-                        {...args}
-                    />
-                )}
+                render={({field: {onChange, value}}) => {
+                    return (
+                        <Select
+                            placeholder={placeholder}
+                            isDisabled={disabled}
+                            id={name}
+                            defaultValue={defaultValue}
+                            onChange={onChange}
+                            value={value}
+                            // @ts-ignore
+                            options={options}
+                            className={`${styles.select} ${!!error ? styles.required : ''}`}
+                            {...args}
+                        />
+                    )
+                }}
             />
             <ErrorLabel error={error}/>
         </div>

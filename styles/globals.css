@@ -25,9 +25,25 @@ body {
     border-color: var(--main) !important;
     box-shadow: 0 0 0 1px var(--main) !important;
 }
-#react-select-3-placeholder{
+
+#react-select-3-placeholder {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color:  #9CA3B9!important;
+    color: #9CA3B9 !important;
+}
+
+.mt-42 {
+    margin-top: 42px;
+}
+
+.color1 {
+    color:#667281!important;
+}
+.w100{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

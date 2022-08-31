@@ -1,13 +1,16 @@
-import React, {Dispatch, FC, SetStateAction} from 'react';
-import styles from "./button.module.scss"
+import React, {Dispatch, FC, SetStateAction} from 'react'
+import {Loader} from "components/elements"
+import styles from './button.module.scss'
 
 interface IButtonProps {
-    title: string,
-    active: boolean,
-    isNum?: boolean,
+    title: string
+    active: boolean
+    isNum?: boolean
     n?: number
     onClick?: Dispatch<SetStateAction<string>>
-    type?: "button" | "submit" | "reset" | undefined
+    type?: 'button' | 'submit' | 'reset' | undefined
+    loading?: boolean
+    disabled: boolean
 }
 
 const Button: FC<IButtonProps> = ({
@@ -15,29 +18,35 @@ const Button: FC<IButtonProps> = ({
                                       active,
                                       isNum = false,
                                       n,
-                                      onClick, type = "button"
+                                      onClick,
+                                      type = 'button',
+                                      loading,
+                                      disabled
                                   }) => {
+    console.log(disabled)
     return (
         <button
-            className={
-                `${styles.wrapper} 
+            className={`${styles.wrapper} 
             ${active ? styles.active : styles.inactive} 
-            ${isNum ? styles.n : ""}`}
-            onClick={() => onClick?.("")}
+            ${isNum ? styles.n : ''} ${disabled  ? styles.disabled : ""}`}
+            onClick={() => onClick?.('')}
             type={type}
+            disabled={disabled}
         >
             {title}
-            {
-                isNum &&
+            {isNum && (
                 <div
                     className={`${styles.num}
-                     ${active ? styles.active : styles.inactive}`}
-                >
+                     ${active ? styles.active : styles.inactive}`}>
                     {n}
                 </div>
+            )}
+            {
+                loading &&
+                <Loader height={20} width={20} color="white"/>
             }
         </button>
-    );
+    )
 }
 
-export default Button;
+export default Button

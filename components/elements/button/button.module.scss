@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  gap: 10px;
 
   &.active {
     color: var(--white);
@@ -17,6 +18,11 @@
   &.inactive {
     color: var(--11);
     background: var(--navlink);
+  }
+
+  &.disabled {
+    background-color: rgb(23, 150, 255);
+    cursor: not-allowed;
   }
 
   &.n {

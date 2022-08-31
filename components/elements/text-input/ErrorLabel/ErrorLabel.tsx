@@ -1,8 +1,8 @@
-import { FC } from "react"
-import styles from "./error-label.module.scss"
+import { FC } from 'react'
+import styles from './error-label.module.scss'
 
 export interface IErrorLabelProps {
-    error: string
+  error: string
 }
 
 const ErrorLabel: FC<IErrorLabelProps> = ({ error }) => {

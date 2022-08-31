@@ -1,21 +1,24 @@
 import type {AppProps} from 'next/app'
-import {Provider} from "react-redux";
+import {Provider} from 'react-redux'
 import {PersistGate} from 'redux-persist/integration/react'
 import {persistStore} from 'redux-persist'
-import store from "store"
-import DashboardLayout from "../components/layout";
+import store from 'store'
+import DashboardLayout from '../components/layout'
 import 'styles/globals.css'
-import 'tailwindcss/tailwind.css';
+import 'tailwindcss/tailwind.css'
 import 'assets/var.scss'
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css'
+import {ToastContainer} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
-const persistor = persistStore(store);
+const persistor = persistStore(store)
 
 function MyApp({Component, pageProps}: AppProps) {
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 <DashboardLayout>
+                    <ToastContainer/>
                     <Component {...pageProps} />
                 </DashboardLayout>
             </PersistGate>
